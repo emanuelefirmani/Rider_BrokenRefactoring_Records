@@ -3,5 +3,5 @@
 static class TimeWindowCalculator
 {
     internal static TimeWindowRecord GetNextWindow(TimeWindowRecord current) => 
-        new(current.EndedAt, current.EndedAt.AddHours(1));
+        current with { EndedAt = current.EndedAt.AddHours(1) };
 }
